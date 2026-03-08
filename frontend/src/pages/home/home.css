@@ -1,0 +1,262 @@
+.home{
+    /* padding-bottom:40px; */
+}
+
+.hero{
+
+  height:80vh;
+  width:100%;
+
+  background-image: url("/farm.jpg");
+  background-size: cover;
+  background-position: center;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-overlay{
+
+  width:100%;
+  height:100%;
+
+  backdrop-filter: blur(1px);
+
+  background: rgba(0,0,0,0.35);
+
+  display:flex;
+  align-items:center;
+  justify-content:left;
+  padding-left: 50px;
+}
+
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:64px;
+    background: linear-gradient(to right, white 45%, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.hero-text p{
+    margin-top:20px;
+    font-size:18px;
+    color:white;
+    font-family: "Roboto", sans-serif;
+}
+
+.hero-btn{
+    font-family: "Roboto", sans-serif;
+    margin-top:25px;
+    padding:12px 24px;
+    font-size:16px;
+    border:none;
+    background:#22c55e;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    background:#16a34a;
+}
+
+
+.features{
+  margin-top:100px;
+  text-align:center;
+}
+
+.features-title{
+  font-size:40px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom:40px;
+}
+
+.features-title span{
+    color: #22c55e;
+}
+
+.feature-grid{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+
+.feature-card{
+
+  width:260px;
+  padding:30px;
+  font-family: "Roboto", sans-serif;
+
+  border-radius:16px;
+
+  background:#FFFBF1;
+
+  box-shadow:0px 8px 20px rgba(0,0,0,0.08);
+
+  transition:all 0.35s ease;
+
+  position:relative;
+}
+
+
+
+.feature-icon{
+
+  font-size:28px;
+
+  width:60px;
+  height:60px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:auto;
+  margin-bottom:20px;
+
+  border-radius:50%;
+
+  background:#dcfce7;
+}
+
+
+.feature-card h3{
+  margin-bottom:12px;
+  font-size:20px;
+}
+
+
+
+.feature-card p{
+  color:#555;
+  font-size:15px;
+}
+
+
+
+.feature-card:hover{
+
+  transform:translateY(-12px) scale(1.03);
+
+  box-shadow:0px 20px 40px rgba(0,0,0,0.15);
+
+}
+
+
+
+
+.how{
+
+  margin-top:120px;
+  text-align:center;
+
+}
+
+.how-title{
+
+  font-size:32px;
+  margin-bottom:60px;
+  font-family: "Roboto", sans-serif;
+
+
+}
+
+.how-title span{
+    color: #22c55e;
+}
+
+
+
+.steps{
+
+  display:flex;
+  justify-content:center;
+  gap:60px;
+
+  position:relative;
+
+}
+
+
+
+.step{
+
+  width:260px;
+
+  padding:25px;
+
+  border-radius:14px;
+
+  background:white;
+
+  box-shadow:0px 8px 20px rgba(0,0,0,0.08);
+
+  transition:0.3s;
+
+}
+
+.step:hover{
+
+  transform:translateY(-10px);
+
+  box-shadow:0px 20px 40px rgba(0,0,0,0.12);
+
+}
+
+
+
+.step-number{
+
+  width:50px;
+  height:50px;
+
+  margin:auto;
+  margin-bottom:18px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:20px;
+  font-weight:bold;
+
+  color:white;
+
+  background:#22c55e;
+
+}
+
+
+.step h3{
+
+  margin-bottom:10px;
+  font-size:20px;
+  font-family: "Roboto", sans-serif;
+
+
+}
+
+.step p{
+
+  font-size:15px;
+  color:#555;
+  font-family: "Roboto", sans-serif;
+
+
+}
