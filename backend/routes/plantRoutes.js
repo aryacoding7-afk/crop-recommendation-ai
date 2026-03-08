@@ -1,41 +1,45 @@
 const express = require("express");
 const router = express.Router();
+const axios = require("axios");
 
-const plants = require("../data/plants.json");
+const API_TOKEN = "usr-t_TllfeOAwcUSGn84AS5KHuhvFgSgYFeB7jTfr3ZY";
 
+// search plants
+router.get("/plants", async (req, res) => {
 
-// GET all plants OR search plants
-router.get("/plants", (req, res) => {
+  try {
 
-  const search = req.query.search?.toLowerCase();
+    const search = req.query.search || "";
 
-  // If no search query → return all plants
-  if (!search) {
-    return res.json(plants);
+    const response = await axios.get(
+      `https://trefle.io/api/v1/plants/search`,
+      {
+        params: {
+          q: search,
+          token: API_TOKEN
+        }
+      }
+    );
+
+    const plants = response.data.data.map(p => ({
+      common_name: p.common_name,
+      scientific_name: p.scientific_name,
+      family: p.family,
+      image_url: p.image_url
+    }));
+
+    res.json(plants);
+
+  } catch (error) {
+
+    console.error(error);
+
+    res.status(500).json({
+      error: "Plant API error"
+    });
+
   }
 
-  // Filter plants by common name
-  const results = plants.filter(plant =>
-    plant.common_name.toLowerCase().includes(search)
-  );
-
-  res.json(results);
 });
-
-
-// GET single plant by name
-router.get("/plants/:name", (req, res) => {
-
-  const plant = plants.find(
-    p => p.common_name.toLowerCase() === req.params.name.toLowerCase()
-  );
-
-  if (!plant) {
-    return res.status(404).json({ error: "Plant not found" });
-  }
-
-  res.json(plant);
-});
-
 
 module.exports = router;
