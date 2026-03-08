@@ -18,6 +18,7 @@ const cors = require("cors");
 const cropRoutes = require("./routes/cropRoutes");
 const plantRoutes = require("./routes/plantRoutes");
 const mandiRoutes = require("./routes/mandiRoutes");
+const communityRoutes = require("./routes/communityRoutes");
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use(express.json());
 app.use("/api", cropRoutes);
 app.use("/api", plantRoutes);
 app.use("/api", mandiRoutes);
+app.use("/api", communityRoutes);
 
 const PORT = 5000;
 
