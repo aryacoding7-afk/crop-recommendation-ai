@@ -1,3 +1,17 @@
+const { Client } = require('pg');
+
+const client = new Client({
+  host: 'localhost',
+  user: 'postgres',
+  password: 'yourpassword',
+  database: 'crop_recommendation',
+  port: 5432,
+});
+
+client.connect()
+  .then(() => console.log("Connected to PostgreSQL"))
+  .catch(err => console.error("Connection error", err));
+
 const express = require("express");
 const cors = require("cors");
 
