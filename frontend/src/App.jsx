@@ -6,6 +6,7 @@ import CropRecommendation from "./pages/cropai/cropai";
 import CropLibrary from "./pages/croplibrary/CropLibrary";
 import MandiPrices from "./pages/mandiprice/MandiPrice";
 import Footer from "./components/footer/Footer";
+import Community from "./pages/community/community";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/recommendation" element={<CropRecommendation />} />
         <Route path="/library" element={<CropLibrary />} />
         <Route path="/mandi" element={<MandiPrices />} />
+        <Route path="/community" element={<Community/>}></Route>
       </Routes>
       
 

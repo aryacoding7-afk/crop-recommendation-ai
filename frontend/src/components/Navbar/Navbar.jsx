@@ -46,6 +46,11 @@ function Navbar() {
 
       </div>
 
+      <Link
+        className="community-link"
+          to="/community"
+      >Community</Link>
+
       <div
         className="menu-btn"
         onClick={() => setMenuOpen(!menuOpen)}

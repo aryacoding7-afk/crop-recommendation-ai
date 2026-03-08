@@ -106,3 +106,19 @@
   }
 
 }
+
+.community-link{
+  background-color: #22c55e;
+  text-decoration: none;
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.community-link:hover{
+  background-color: #16a34a;
+}
